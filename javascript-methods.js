@@ -31,10 +31,12 @@ Array.prototype.myFilter = function(callbackFn) {
 
 // SOME //
 Array.prototype.mySome = function(callbackFn) {
-  
+  // similar loop to the one used for the myMap implementation
+  // also using value, index, array
   for(let i = 0; i < this.length; i++){
     let temp = callbackFn(this[i], i, this);
 
+    // if any one element passes the function test then it will break and return the value
     if(temp === true){
       break;
     }
