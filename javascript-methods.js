@@ -46,7 +46,18 @@ Array.prototype.mySome = function(callbackFn) {
 
 // EVERY //
 Array.prototype.myEvery = function(callbackFn) {
-  // Place your code here.
+  // this function is the opposite of the mySome function, so if something returns false
+  // it will break and return that value
+  // also using value, index, array
+  for(let i = 0; i < this.length; i++){
+    let temp = callbackFn(this[i], i, this);
+
+    // if any one element passes the function test then it will break and return the value
+    if(temp === false){
+      break;
+    }
+}
+  return temp;
 };
 
 // REDUCE //
