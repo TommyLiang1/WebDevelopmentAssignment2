@@ -31,7 +31,15 @@ Array.prototype.myFilter = function(callbackFn) {
 
 // SOME //
 Array.prototype.mySome = function(callbackFn) {
-  // Place your code here.
+  
+  for(let i = 0; i < this.length; i++){
+    let temp = callbackFn(this[i], i, this);
+
+    if(temp === true){
+      break;
+    }
+}
+  return temp;
 };
 
 // EVERY //
