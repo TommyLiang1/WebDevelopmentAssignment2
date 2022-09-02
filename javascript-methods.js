@@ -15,7 +15,17 @@ Array.prototype.myMap = function(callbackFn) {
 
 // FILTER //
 Array.prototype.myFilter = function(callbackFn) {
-  // Place your code here.
+  // Creating results array that will be returned at the end of function call
+  let results = [];
+
+  // Iterate through passed in array
+  for(let i = 0; i < this.length; i++) {
+    // Call back function will return a boolean
+    if(callbackFn(this[i], i, this))
+      // If Call back function is passed, push element to results[]
+      results.push(this[i]);
+  }
+  return results;
 };
 
 // SOME //
