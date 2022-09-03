@@ -89,11 +89,20 @@ Object.myKeys = function(object) {
     for(i in object){
       testArray.push(i);
     }
-    
+
   return testArray;
 };
 
 // VALUES //
 Object.myValues = function(object) {
-  // Place your code here.
+  //the values function is the opposite of the keys function and 
+  //will iterate over the 'object' and return the values of the variables/enumerables
+  let testArray = [];
+
+  //using a for in loop to iterate through each value in the variables/enumerables in the 'object' and pushing it to the testArray
+    for(i in object){
+      testArray.push(object[i]);
+    }
+    
+  return testArray;
 };
