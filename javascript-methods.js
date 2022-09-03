@@ -85,7 +85,7 @@ Object.myKeys = function(object) {
   let testArray = [];
 
     for(i in object){
-      testArray.push(i)
+      testArray.push(i);
     }
   return testArray;
 };
