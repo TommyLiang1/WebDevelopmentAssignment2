@@ -82,11 +82,14 @@ Array.prototype.myLastIndexOf = function(searchElement) {
 
 // KEYS //
 Object.myKeys = function(object) {
+  //the keys function will iterate over the 'object' and return the variables/enumerables
   let testArray = [];
 
+  //using a for in loop to iterate through each variable/enumerable in the 'object' and pushing it to the testArray
     for(i in object){
       testArray.push(i);
     }
+    
   return testArray;
 };
 
