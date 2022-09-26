@@ -10,7 +10,20 @@ In this Assignment, we use the prototype constructor to add new methods to the A
 
 // MAP //
 Array.prototype.myMap = function(callbackFn) {
-  // Place your code here.
+  // created a test array to hold the contents of the map
+  // using let instead of var so there wont be any redeclaration errors
+  let testArray = [];
+
+  // this is being used as a way to globally call the array from callbackFn 
+  // callbackFn will also be using the standard map syntax so it would be map(element, index, array)
+  for(let i = 0; i < this.length; i++){
+    if(this[i] == null) {
+      testArray[i] = null;
+      continue;
+    }   
+    testArray[i] = callbackFn(this[i]);
+  }
+  return testArray;
 };
 
 // FILTER //
@@ -19,8 +32,9 @@ Array.prototype.myFilter = function(callbackFn) {
   let results = [];
   // Iterate through passed in array
   for(let i = 0; i < this.length; i++) {
-    if(this[i] == null)
+    if(this[i] == null) {
       continue;
+    }
     // Call back function will return a boolean
     if(callbackFn(this[i]))
       // If Call back function is passed, push element to results[]
@@ -69,7 +83,11 @@ Object.myValues = function(object) {
   // Place your code here.
 };
 
-function greaterFive(x){
+function timesTwo(x) {
+  return 2*x;
+}
+
+function greaterFive(x) {
   return x > 5;
 }
 
@@ -79,50 +97,131 @@ let testArray2 = [2, , 10, 5, 3, 15];
 let testArray3 = [3, 11, 5, 10, 12, ,];
 let testArray4 = [, 3, 6, 5, 9, 11];
 
-// TESTS FOR myFilter FUNCTION
+let newArray = [];
+let newArray1 = [];
+
+// TESTS FOR myMap FUNCTION
 /*
+console.log("Test 1");
 console.log("Initial Array: ");
 console.log(testArray);
-let newArray = testArray.myFilter(greaterFive);
+newArray = testArray.myMap(timesTwo);
 console.log("My Test Function: ");
 console.log(newArray);
-newArray = testArray.filter(greaterFive);
+newArray1 = testArray.map(timesTwo);
 console.log("Built in Function: ");
-console.log(newArray);
+console.log(newArray1);
+console.log("Own Test Function == Built in Function?");
+console.log(JSON.stringify(newArray) == JSON.stringify(newArray1));
 
+console.log("\nTest 2");
+console.log("Initial Array: ");
+console.log(testArray1);
+newArray = testArray1.myMap(timesTwo);
+console.log("My Test Function: ");
+console.log(newArray);
+newArray1 = testArray1.map(timesTwo);
+console.log("Built in Function: ");
+console.log(newArray1);
+console.log("Own Test Function == Built in Function?");
+console.log(JSON.stringify(newArray) == JSON.stringify(newArray1));
+
+console.log("\nTest 3");
+console.log("Initial Array: ");
+console.log(testArray2);
+newArray = testArray2.myMap(timesTwo);
+console.log("My Test Function: ");
+console.log(newArray);
+newArray1 = testArray2.map(timesTwo);
+console.log("Built in Function: ");
+console.log(newArray1);
+console.log("Own Test Function == Built in Function?");
+console.log(JSON.stringify(newArray) == JSON.stringify(newArray1));
+
+console.log("\nTest 4");
+console.log("Initial Array: ");
+console.log(testArray3);
+newArray = testArray3.myMap(timesTwo);
+console.log("My Test Function: ");
+console.log(newArray);
+newArray1 = testArray3.map(timesTwo);
+console.log("Built in Function: ");
+console.log(newArray1);
+console.log("Own Test Function == Built in Function?");
+console.log(JSON.stringify(newArray) == JSON.stringify(newArray1));
+
+console.log("\nTest 5");
+console.log("Initial Array: ");
+console.log(testArray4);
+newArray = testArray4.myMap(timesTwo);
+console.log("My Test Function: ");
+console.log(newArray);
+newArray1 = testArray4.map(timesTwo);
+console.log("Built in Function: ");
+console.log(newArray1);
+console.log("Own Test Function == Built in Function?");
+console.log(JSON.stringify(newArray) == JSON.stringify(newArray1));
+*/
+
+// TESTS FOR myFilter FUNCTION
+/*
+console.log("Test 1");
+console.log("Initial Array: ");
+console.log(testArray);
+newArray = testArray.myFilter(greaterFive);
+console.log("My Test Function: ");
+console.log(newArray);
+newArray1 = testArray.filter(greaterFive);
+console.log("Built in Function: ");
+console.log(newArray1);
+console.log("Own Test Function == Built in Function?");
+console.log(JSON.stringify(newArray) == JSON.stringify(newArray1));
+
+console.log("\nTest 2");
 console.log("Initial Array: ");
 console.log(testArray1);
 newArray = testArray1.myFilter(greaterFive);
 console.log("My Test Function: ");
 console.log(newArray);
-newArray = testArray1.filter(greaterFive);
+newArray1 = testArray1.filter(greaterFive);
 console.log("Built in Function: ");
-console.log(newArray);
+console.log(newArray1);
+console.log("Own Test Function == Built in Function?");
+console.log(JSON.stringify(newArray) == JSON.stringify(newArray1));
 
+console.log("\nTest 3");
 console.log("Initial Array: ");
 console.log(testArray2);
 newArray = testArray2.myFilter(greaterFive);
 console.log("My Test Function: ");
 console.log(newArray);
-newArray = testArray2.filter(greaterFive);
+newArray1 = testArray2.filter(greaterFive);
 console.log("Built in Function: ");
-console.log(newArray);
+console.log(newArray1);
+console.log("Own Test Function == Built in Function?");
+console.log(JSON.stringify(newArray) == JSON.stringify(newArray1));
 
+console.log("\nTest 4");
 console.log("Initial Array: ");
 console.log(testArray3);
 newArray = testArray3.myFilter(greaterFive);
 console.log("My Test Function: ");
 console.log(newArray);
-newArray = testArray3.filter(greaterFive);
+newArray1 = testArray3.filter(greaterFive);
 console.log("Built in Function: ");
-console.log(newArray);
+console.log(newArray1);
+console.log("Own Test Function == Built in Function?");
+console.log(JSON.stringify(newArray) == JSON.stringify(newArray1));
 
+console.log("\nTest 5");
 console.log("Initial Array: ");
 console.log(testArray4);
 newArray = testArray4.myFilter(greaterFive);
 console.log("My Test Function: ");
 console.log(newArray);
-newArray = testArray4.filter(greaterFive);
+newArray1 = testArray4.filter(greaterFive);
 console.log("Built in Function: ");
-console.log(newArray);
+console.log(newArray1);
+console.log("Own Test Function == Built in Function?");
+console.log(JSON.stringify(newArray) == JSON.stringify(newArray1));
 */
