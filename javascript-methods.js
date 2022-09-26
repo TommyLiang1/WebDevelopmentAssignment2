@@ -17,11 +17,12 @@ Array.prototype.myMap = function(callbackFn) {
 Array.prototype.myFilter = function(callbackFn) {
   // Creating results array that will be returned at the end of function call
   let results = [];
-
   // Iterate through passed in array
   for(let i = 0; i < this.length; i++) {
+    if(this[i] == null)
+      continue;
     // Call back function will return a boolean
-    if(callbackFn(this[i], i, this))
+    if(callbackFn(this[i]))
       // If Call back function is passed, push element to results[]
       results.push(this[i]);
   }
@@ -67,3 +68,58 @@ Object.myKeys = function(object) {
 Object.myValues = function(object) {
   // Place your code here.
 };
+
+function greaterFive(x){
+  return x > 5;
+}
+
+// let testArray = [];
+// let testArray1 = [3, 5, 7, 10, 25];
+// let testArray2 = [2, , 10, 5, 3, 15];
+// let testArray3 = [3, 11, 5, 10, 12, ,];
+// let testArray4 = [, 3, 6, 5, 9, 11];
+
+// console.log("Initial Array: ");
+// console.log(testArray);
+// let newArray = testArray.myFilter(greaterFive);
+// console.log("My Test Function: ");
+// console.log(newArray);
+// newArray = testArray.filter(greaterFive);
+// console.log("Built in Function: ");
+// console.log(newArray);
+
+// console.log("Initial Array: ");
+// console.log(testArray1);
+// newArray = testArray1.myFilter(greaterFive);
+// console.log("My Test Function: ");
+// console.log(newArray);
+// newArray = testArray1.filter(greaterFive);
+// console.log("Built in Function: ");
+// console.log(newArray);
+
+// console.log("Initial Array: ");
+// console.log(testArray2);
+// newArray = testArray2.myFilter(greaterFive);
+// console.log("My Test Function: ");
+// console.log(newArray);
+// newArray = testArray2.filter(greaterFive);
+// console.log("Built in Function: ");
+// console.log(newArray);
+
+// console.log("Initial Array: ");
+// console.log(testArray3);
+// newArray = testArray3.myFilter(greaterFive);
+// console.log("My Test Function: ");
+// console.log(newArray);
+// newArray = testArray3.filter(greaterFive);
+// console.log("Built in Function: ");
+// console.log(newArray);
+
+// console.log("Initial Array: ");
+// console.log(testArray4);
+// newArray = testArray4.myFilter(greaterFive);
+// console.log("My Test Function: ");
+// console.log(newArray);
+// newArray = testArray4.filter(greaterFive);
+// console.log("Built in Function: ");
+// console.log(newArray);
