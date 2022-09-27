@@ -9,3 +9,12 @@ The prototype constructor is used to add new methods (functions) and properties 
 - If a property is constructed, then the object will be given the property and its value, as default.
 
 In this Assignment, we use the prototype constructor to add new methods to the Array() object.
+
+## Group Members
+
+1. Wei Da Chen - [chenweida6220](https://github.com/chenweida6220)
+2. Tommy Liang - [TommyLiang1](https://github.com/TommyLiang1)
+3. Kevin Hardyal - [kevinville](https://github.com/kevinville)
+4. Stephanie Kim - [steph-kimm](https://github.com/steph-kimm)
+
+##
