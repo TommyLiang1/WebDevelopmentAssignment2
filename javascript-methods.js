@@ -17,11 +17,13 @@ Array.prototype.myMap = function(callbackFn) {
   // this is being used as a way to globally call the array from callbackFn 
   // callbackFn will also be using the standard map syntax so it would be map(element, index, array)
   for(let i = 0; i < this.length; i++){
-    if(this[i] == null) {
-      testArray[i] = null;
+    if(this[i] === undefined) {
+      //console.log("null at index " + i);
+      //testArray[i] = null;
       continue;
     }   
-    testArray[i] = callbackFn(this[i]);
+    testArray[i] = callbackFn(this[i], i, this);
+    //testArray.push(callbackFn(this[i], i, this));
   }
   return testArray;
 };
@@ -32,7 +34,7 @@ Array.prototype.myFilter = function(callbackFn) {
   let results = [];
   // Iterate through passed in array
   for(let i = 0; i < this.length; i++) {
-    if(this[i] == null) {
+    if(this[i] === undefined) {
       continue;
     }
     // Call back function will return a boolean
@@ -48,7 +50,7 @@ Array.prototype.mySome = function(callbackFn) {
   // similar loop to the one used for the myMap implementation
   // also using value, index, array
   for(let i = 0; i < this.length; i++){
-    if(this[i] == null)
+    if(this[i] === undefined)
       continue;
     if(callbackFn(this[i]))
       return true;
@@ -62,7 +64,7 @@ Array.prototype.myEvery = function(callbackFn) {
   // it will break and return that value
   // also using value, index, array
   for(let i = 0; i < this.length; i++){
-    if(this[i] == null)
+    if(this[i] === undefined)
       continue;
     if(!callbackFn(this[i]))
       return false;
