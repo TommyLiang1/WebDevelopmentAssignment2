@@ -45,7 +45,15 @@ Array.prototype.myFilter = function(callbackFn) {
 
 // SOME //
 Array.prototype.mySome = function(callbackFn) {
-  // Place your code here.
+  // similar loop to the one used for the myMap implementation
+  // also using value, index, array
+  for(let i = 0; i < this.length; i++){
+    if(this[i] == null)
+      continue;
+    if(callbackFn(this[i]))
+      return true;
+  }
+  return false;
 };
 
 // EVERY //
@@ -83,12 +91,16 @@ Object.myValues = function(object) {
   // Place your code here.
 };
 
-function timesTwo(x) {
-  return 2*x;
+const timesTwo = (x) => {
+  return 2 * x;
 }
 
-function greaterFive(x) {
+const greaterFive = (x) => { 
   return x > 5;
+}
+
+const modX = (x) => {
+  return x % 15 == 0;
 }
 
 let testArray = [];
@@ -220,6 +232,69 @@ newArray = testArray4.myFilter(greaterFive);
 console.log("My Test Function: ");
 console.log(newArray);
 newArray1 = testArray4.filter(greaterFive);
+console.log("Built in Function: ");
+console.log(newArray1);
+console.log("Own Test Function == Built in Function?");
+console.log(JSON.stringify(newArray) == JSON.stringify(newArray1));
+*/
+
+// TESTS FOR mySome FUNCTION
+/*
+console.log("Test 1");
+console.log("Initial Array: ");
+console.log(testArray);
+newArray = testArray.mySome(mod3);
+console.log("My Test Function: ");
+console.log(newArray);
+newArray1 = testArray.some(mod3);
+console.log("Built in Function: ");
+console.log(newArray1);
+console.log("Own Test Function == Built in Function?");
+console.log(JSON.stringify(newArray) == JSON.stringify(newArray1));
+
+console.log("\nTest 2");
+console.log("Initial Array: ");
+console.log(testArray1);
+newArray = testArray1.mySome(mod3);
+console.log("My Test Function: ");
+console.log(newArray);
+newArray1 = testArray1.some(mod3);
+console.log("Built in Function: ");
+console.log(newArray1);
+console.log("Own Test Function == Built in Function?");
+console.log(JSON.stringify(newArray) == JSON.stringify(newArray1));
+
+console.log("\nTest 3");
+console.log("Initial Array: ");
+console.log(testArray2);
+newArray = testArray2.mySome(mod3);
+console.log("My Test Function: ");
+console.log(newArray);
+newArray1 = testArray2.some(mod3);
+console.log("Built in Function: ");
+console.log(newArray1);
+console.log("Own Test Function == Built in Function?");
+console.log(JSON.stringify(newArray) == JSON.stringify(newArray1));
+
+console.log("\nTest 4");
+console.log("Initial Array: ");
+console.log(testArray3);
+newArray = testArray3.mySome(mod3);
+console.log("My Test Function: ");
+console.log(newArray);
+newArray1 = testArray3.some(mod3);
+console.log("Built in Function: ");
+console.log(newArray1);
+console.log("Own Test Function == Built in Function?");
+console.log(JSON.stringify(newArray) == JSON.stringify(newArray1));
+
+console.log("\nTest 5");
+console.log("Initial Array: ");
+console.log(testArray4);
+newArray = testArray4.mySome(mod3);
+console.log("My Test Function: ");
+console.log(newArray);
+newArray1 = testArray4.some(mod3);
 console.log("Built in Function: ");
 console.log(newArray1);
 console.log("Own Test Function == Built in Function?");
