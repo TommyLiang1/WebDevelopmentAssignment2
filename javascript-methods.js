@@ -38,7 +38,7 @@ Array.prototype.myFilter = function(callbackFn) {
       continue;
     }
     // Call back function will return a boolean
-    if(callbackFn(this[i]))
+    if(callbackFn(this[i], i, this))
       // If Call back function is passed, push element to results[]
       results.push(this[i]);
   }
@@ -52,7 +52,7 @@ Array.prototype.mySome = function(callbackFn) {
   for(let i = 0; i < this.length; i++){
     if(this[i] === undefined)
       continue;
-    if(callbackFn(this[i]))
+    if(callbackFn(this[i], i, this))
       return true;
   }
   return false;
@@ -66,7 +66,7 @@ Array.prototype.myEvery = function(callbackFn) {
   for(let i = 0; i < this.length; i++){
     if(this[i] === undefined)
       continue;
-    if(!callbackFn(this[i]))
+    if(!callbackFn(this[i], i, this))
       return false;
   }
   return true; 
@@ -127,8 +127,8 @@ let testArray4 = [, 3, 6, 5, 9, 11];
 let newArray = [];
 let newArray1 = [];
 
-// TESTS FOR myMap FUNCTION
 /*
+// TESTS FOR myMap FUNCTION
 console.log("TESTS FOR myMap FUNCTION");
 console.log("Test 1");
 console.log("Initial Array: ");
@@ -190,10 +190,10 @@ console.log(newArray1);
 console.log("Own Test Function == Built in Function?");
 console.log(JSON.stringify(newArray) == JSON.stringify(newArray1));
 console.log("\n");
-*/
+
 
 // TESTS FOR myFilter FUNCTION
-/*
+
 console.log("TESTS FOR myFilter FUNCTION");
 console.log("Test 1");
 console.log("Initial Array: ");
@@ -255,10 +255,10 @@ console.log(newArray1);
 console.log("Own Test Function == Built in Function?");
 console.log(JSON.stringify(newArray) == JSON.stringify(newArray1));
 console.log("\n");
-*/
+
 
 // TESTS FOR mySome FUNCTION
-/*
+
 console.log("TESTS FOR mySome FUNCTION");
 console.log("Test 1");
 console.log("Initial Array: ");
@@ -320,10 +320,10 @@ console.log(newArray1);
 console.log("Own Test Function == Built in Function?");
 console.log(JSON.stringify(newArray) == JSON.stringify(newArray1));
 console.log("\n");
-*/
+
 
 // TESTS FOR myEvery FUNCTION
-/*
+
 console.log("TESTS FOR myEvery FUNCTION");
 console.log("Test 1");
 console.log("Initial Array: ");
