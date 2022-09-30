@@ -89,6 +89,11 @@ Array.prototype.myReduce = function(callbackFn) {
 
 // INCLUDES //
 Array.prototype.myIncludes = function(searchElement) {
+  for(let i = 0; i < this.length; i++) {
+    if(this[i] === searchElement)
+      return true;
+  }
+  return false;
 };
 
 // INDEXOF //
@@ -471,6 +476,70 @@ newArray = testArray4.myReduce(maxNum);
 console.log("My Test Function: ");
 console.log(newArray);
 newArray1 = testArray4.reduce(maxNum);
+console.log("Built in Function: ");
+console.log(newArray1);
+console.log("Own Test Function == Built in Function?");
+console.log(newArray === newArray1);
+*/
+
+/*
+// TESTS FOR myIncludes FUNCTION
+console.log("TESTS FOR myEvery FUNCTION");
+console.log("Test 1");
+console.log("Initial Array: ");
+console.log(testArray);
+newArray = testArray.myIncludes(5);
+console.log("My Test Function: ");
+console.log(newArray);
+newArray1 = testArray.includes(5);
+console.log("Built in Function: ");
+console.log(newArray1);
+console.log("Own Test Function == Built in Function?");
+console.log(newArray === newArray1);
+
+console.log("\nTest 2");
+console.log("Initial Array: ");
+console.log(testArray1);
+newArray = testArray1.myIncludes(undefined);
+console.log("My Test Function: ");
+console.log(newArray);
+newArray1 = testArray1.includes(undefined);
+console.log("Built in Function: ");
+console.log(newArray1);
+console.log("Own Test Function == Built in Function?");
+console.log(newArray === newArray1);
+
+console.log("\nTest 3");
+console.log("Initial Array: ");
+console.log(testArray2);
+newArray = testArray2.myIncludes(20);
+console.log("My Test Function: ");
+console.log(newArray);
+newArray1 = testArray2.includes(20);
+console.log("Built in Function: ");
+console.log(newArray1);
+console.log("Own Test Function == Built in Function?");
+console.log(newArray === newArray1);
+
+console.log("\nTest 4");
+console.log("Initial Array: ");
+console.log(testArray3);
+newArray = testArray3.myIncludes(10);
+console.log("My Test Function: ");
+console.log(newArray);
+newArray1 = testArray3.includes(10);
+console.log("Built in Function: ");
+console.log(newArray1);
+console.log("Own Test Function == Built in Function?");
+console.log(newArray === newArray1);
+
+console.log("\nTest 5");
+console.log("Initial Array: ");
+console.log(testArray4);
+newArray = testArray4.myIncludes(3);
+console.log("My Test Function: ");
+console.log(newArray);
+newArray1 = testArray4.includes(3);
 console.log("Built in Function: ");
 console.log(newArray1);
 console.log("Own Test Function == Built in Function?");
