@@ -4,7 +4,6 @@ Every object in JavaScript has a built-in property called "prototype."
 The prototype constructor is used to add new methods (functions) and properties to a JavaScript object. 
 - If a method is constructed, then it will be available for the object. 
 - If a property is constructed, then the object will be given the property and its value, as default.
-
 In this Assignment, we use the prototype constructor to add new methods to the Array() object.
 ----------------------------------------------------------*/
 
@@ -105,7 +104,15 @@ Array.prototype.myLastIndexOf = function(searchElement) {
 
 // KEYS //
 Object.myKeys = function(object) {
-  // Place your code here.
+  //the keys function will iterate over the 'object' and return the variables/enumerables
+  let testArray = [];
+
+  //using a for in loop to iterate through each variable/enumerable in the 'object' and pushing it to the testArray
+    for(i in object){
+      testArray.push(i);
+    }
+    
+  return testArray;
 };
 
 // VALUES //
@@ -202,9 +209,7 @@ console.log("Own Test Function == Built in Function?");
 console.log(JSON.stringify(newArray) == JSON.stringify(newArray1));
 console.log("\n");
 
-
 // TESTS FOR myFilter FUNCTION
-
 console.log("TESTS FOR myFilter FUNCTION");
 console.log("Test 1");
 console.log("Initial Array: ");
@@ -267,9 +272,7 @@ console.log("Own Test Function == Built in Function?");
 console.log(JSON.stringify(newArray) == JSON.stringify(newArray1));
 console.log("\n");
 
-
 // TESTS FOR mySome FUNCTION
-
 console.log("TESTS FOR mySome FUNCTION");
 console.log("Test 1");
 console.log("Initial Array: ");
@@ -332,9 +335,7 @@ console.log("Own Test Function == Built in Function?");
 console.log(JSON.stringify(newArray) == JSON.stringify(newArray1));
 console.log("\n");
 
-
 // TESTS FOR myEvery FUNCTION
-
 console.log("TESTS FOR myEvery FUNCTION");
 console.log("Test 1");
 console.log("Initial Array: ");
