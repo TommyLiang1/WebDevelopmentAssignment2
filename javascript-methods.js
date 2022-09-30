@@ -73,16 +73,22 @@ Array.prototype.myEvery = function(callbackFn) {
 
 // REDUCE //
 Array.prototype.myReduce = function(callbackFn) {
-  // Place your code here.
+  // If the array is empty, an TypeError is thrown.
+  if(this.length === 0)
+    throw new TypeError("Reduce of empty array with no initial value");
+  if(this.length === 1)
+    return this[0];
+  let result = this[0];
+  for(let i = 1; i < this.length; i++) {
+    if(this[i] === undefined)
+      continue;
+    result = callbackFn(result, this[i]);    
+  }
+  return result;
 };
 
 // INCLUDES //
 Array.prototype.myIncludes = function(searchElement) {
-  for(let i = 0 ; i < this.length ; i++){
-    if(this[i] == searchElement) return true;
-  }
-  return false;
-
 };
 
 // INDEXOF //
@@ -143,6 +149,12 @@ const modX = (x) => {
 
 const modTwo = (x) => {
   return x % 2 == 0;
+}
+
+const maxNum = (a, b) => { 
+  if(a > b)
+    return a;
+  return b;
 }
 
 let testArray = [];
@@ -217,7 +229,9 @@ console.log(newArray1);
 console.log("Own Test Function == Built in Function?");
 console.log(JSON.stringify(newArray) == JSON.stringify(newArray1));
 console.log("\n");
+*/
 
+/*
 // TESTS FOR myFilter FUNCTION
 console.log("TESTS FOR myFilter FUNCTION");
 console.log("Test 1");
@@ -280,7 +294,9 @@ console.log(newArray1);
 console.log("Own Test Function == Built in Function?");
 console.log(JSON.stringify(newArray) == JSON.stringify(newArray1));
 console.log("\n");
+*/
 
+/*
 // TESTS FOR mySome FUNCTION
 console.log("TESTS FOR mySome FUNCTION");
 console.log("Test 1");
@@ -343,7 +359,9 @@ console.log(newArray1);
 console.log("Own Test Function == Built in Function?");
 console.log(JSON.stringify(newArray) == JSON.stringify(newArray1));
 console.log("\n");
+*/
 
+/*
 // TESTS FOR myEvery FUNCTION
 console.log("TESTS FOR myEvery FUNCTION");
 console.log("Test 1");
@@ -405,4 +423,56 @@ console.log("Built in Function: ");
 console.log(newArray1);
 console.log("Own Test Function == Built in Function?");
 console.log(JSON.stringify(newArray) == JSON.stringify(newArray1));
+*/
+
+/*
+// TESTS FOR myReduce FUNCTION
+console.log("TESTS FOR myEvery FUNCTION");
+console.log("\nTest 2");
+console.log("Initial Array: ");
+console.log(testArray1);
+newArray = testArray1.myReduce(maxNum);
+console.log("My Test Function: ");
+console.log(newArray);
+newArray1 = testArray1.reduce(maxNum);
+console.log("Built in Function: ");
+console.log(newArray1);
+console.log("Own Test Function == Built in Function?");
+console.log(newArray === newArray1);
+
+console.log("\nTest 3");
+console.log("Initial Array: ");
+console.log(testArray2);
+newArray = testArray2.myReduce(maxNum);
+console.log("My Test Function: ");
+console.log(newArray);
+newArray1 = testArray2.reduce(maxNum);
+console.log("Built in Function: ");
+console.log(newArray1);
+console.log("Own Test Function == Built in Function?");
+console.log(newArray === newArray1);
+
+console.log("\nTest 4");
+console.log("Initial Array: ");
+console.log(testArray3);
+newArray = testArray3.myReduce(maxNum);
+console.log("My Test Function: ");
+console.log(newArray);
+newArray1 = testArray3.reduce(maxNum);
+console.log("Built in Function: ");
+console.log(newArray1);
+console.log("Own Test Function == Built in Function?");
+console.log(newArray === newArray1);
+
+console.log("\nTest 5");
+console.log("Initial Array: ");
+console.log(testArray4);
+newArray = testArray4.myReduce(maxNum);
+console.log("My Test Function: ");
+console.log(newArray);
+newArray1 = testArray4.reduce(maxNum);
+console.log("Built in Function: ");
+console.log(newArray1);
+console.log("Own Test Function == Built in Function?");
+console.log(newArray === newArray1);
 */
