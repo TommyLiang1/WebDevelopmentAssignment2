@@ -159,6 +159,7 @@ console.log("Built in Function: ");
 console.log(newArray1);
 console.log("Own Test Function == Built in Function?");
 console.log(JSON.stringify(newArray) == JSON.stringify(newArray1));
+
 console.log("\nTest 2");
 console.log("Initial Array: ");
 console.log(testArray1);
@@ -170,6 +171,7 @@ console.log("Built in Function: ");
 console.log(newArray1);
 console.log("Own Test Function == Built in Function?");
 console.log(JSON.stringify(newArray) == JSON.stringify(newArray1));
+
 console.log("\nTest 3");
 console.log("Initial Array: ");
 console.log(testArray2);
@@ -181,6 +183,7 @@ console.log("Built in Function: ");
 console.log(newArray1);
 console.log("Own Test Function == Built in Function?");
 console.log(JSON.stringify(newArray) == JSON.stringify(newArray1));
+
 console.log("\nTest 4");
 console.log("Initial Array: ");
 console.log(testArray3);
@@ -192,6 +195,7 @@ console.log("Built in Function: ");
 console.log(newArray1);
 console.log("Own Test Function == Built in Function?");
 console.log(JSON.stringify(newArray) == JSON.stringify(newArray1));
+
 console.log("\nTest 5");
 console.log("Initial Array: ");
 console.log(testArray4);
@@ -204,6 +208,7 @@ console.log(newArray1);
 console.log("Own Test Function == Built in Function?");
 console.log(JSON.stringify(newArray) == JSON.stringify(newArray1));
 console.log("\n");
+
 // TESTS FOR myFilter FUNCTION
 console.log("TESTS FOR myFilter FUNCTION");
 console.log("Test 1");
@@ -217,6 +222,7 @@ console.log("Built in Function: ");
 console.log(newArray1);
 console.log("Own Test Function == Built in Function?");
 console.log(JSON.stringify(newArray) == JSON.stringify(newArray1));
+
 console.log("\nTest 2");
 console.log("Initial Array: ");
 console.log(testArray1);
@@ -228,6 +234,7 @@ console.log("Built in Function: ");
 console.log(newArray1);
 console.log("Own Test Function == Built in Function?");
 console.log(JSON.stringify(newArray) == JSON.stringify(newArray1));
+
 console.log("\nTest 3");
 console.log("Initial Array: ");
 console.log(testArray2);
@@ -239,6 +246,7 @@ console.log("Built in Function: ");
 console.log(newArray1);
 console.log("Own Test Function == Built in Function?");
 console.log(JSON.stringify(newArray) == JSON.stringify(newArray1));
+
 console.log("\nTest 4");
 console.log("Initial Array: ");
 console.log(testArray3);
@@ -250,6 +258,7 @@ console.log("Built in Function: ");
 console.log(newArray1);
 console.log("Own Test Function == Built in Function?");
 console.log(JSON.stringify(newArray) == JSON.stringify(newArray1));
+
 console.log("\nTest 5");
 console.log("Initial Array: ");
 console.log(testArray4);
@@ -262,6 +271,7 @@ console.log(newArray1);
 console.log("Own Test Function == Built in Function?");
 console.log(JSON.stringify(newArray) == JSON.stringify(newArray1));
 console.log("\n");
+
 // TESTS FOR mySome FUNCTION
 console.log("TESTS FOR mySome FUNCTION");
 console.log("Test 1");
@@ -275,6 +285,7 @@ console.log("Built in Function: ");
 console.log(newArray1);
 console.log("Own Test Function == Built in Function?");
 console.log(JSON.stringify(newArray) == JSON.stringify(newArray1));
+
 console.log("\nTest 2");
 console.log("Initial Array: ");
 console.log(testArray1);
@@ -286,6 +297,7 @@ console.log("Built in Function: ");
 console.log(newArray1);
 console.log("Own Test Function == Built in Function?");
 console.log(JSON.stringify(newArray) == JSON.stringify(newArray1));
+
 console.log("\nTest 3");
 console.log("Initial Array: ");
 console.log(testArray2);
@@ -297,6 +309,7 @@ console.log("Built in Function: ");
 console.log(newArray1);
 console.log("Own Test Function == Built in Function?");
 console.log(JSON.stringify(newArray) == JSON.stringify(newArray1));
+
 console.log("\nTest 4");
 console.log("Initial Array: ");
 console.log(testArray3);
@@ -308,6 +321,7 @@ console.log("Built in Function: ");
 console.log(newArray1);
 console.log("Own Test Function == Built in Function?");
 console.log(JSON.stringify(newArray) == JSON.stringify(newArray1));
+
 console.log("\nTest 5");
 console.log("Initial Array: ");
 console.log(testArray4);
@@ -320,6 +334,7 @@ console.log(newArray1);
 console.log("Own Test Function == Built in Function?");
 console.log(JSON.stringify(newArray) == JSON.stringify(newArray1));
 console.log("\n");
+
 // TESTS FOR myEvery FUNCTION
 console.log("TESTS FOR myEvery FUNCTION");
 console.log("Test 1");
@@ -333,6 +348,7 @@ console.log("Built in Function: ");
 console.log(newArray1);
 console.log("Own Test Function == Built in Function?");
 console.log(JSON.stringify(newArray) == JSON.stringify(newArray1));
+
 console.log("\nTest 2");
 console.log("Initial Array: ");
 console.log(testArray1);
@@ -344,6 +360,7 @@ console.log("Built in Function: ");
 console.log(newArray1);
 console.log("Own Test Function == Built in Function?");
 console.log(JSON.stringify(newArray) == JSON.stringify(newArray1));
+
 console.log("\nTest 3");
 console.log("Initial Array: ");
 console.log(testArray2);
@@ -355,6 +372,7 @@ console.log("Built in Function: ");
 console.log(newArray1);
 console.log("Own Test Function == Built in Function?");
 console.log(JSON.stringify(newArray) == JSON.stringify(newArray1));
+
 console.log("\nTest 4");
 console.log("Initial Array: ");
 console.log(testArray3);
@@ -366,6 +384,7 @@ console.log("Built in Function: ");
 console.log(newArray1);
 console.log("Own Test Function == Built in Function?");
 console.log(JSON.stringify(newArray) == JSON.stringify(newArray1));
+
 console.log("\nTest 5");
 console.log("Initial Array: ");
 console.log(testArray4);
