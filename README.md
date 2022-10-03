@@ -45,6 +45,7 @@ Make sure to carefully understand what each native method is designed to do, and
 Strongly suggested: Use Mozilla Developer Network (MDN) Web Docs linked above to understand how each native JavaScript method works. Pay attention to what arguments they take as well as the return value.  
 
 **JavaScript Prototype: Method**
+
 Every object in JavaScript has a built-in property called "prototype." 
 
 The prototype constructor is used to add new methods (functions) and properties to a JavaScript object. 
