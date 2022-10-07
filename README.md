@@ -6,7 +6,7 @@ Starter template code for Assignment 2 - JavaScript Methods.
 1. [Group Members](#Group-Members)
 2. [Overview](#Overview)
 3. [Product Spec](#Product-Spec)
-4. [GIF](#GIF)
+4. [Tests](#Tests)
 5. [Grading](#Grading)
 
 ## Group Members
@@ -54,8 +54,45 @@ The prototype constructor is used to add new methods (functions) and properties 
 
 In this Assignment, we use the prototype constructor to add new methods to the Array() object.
  
-## GIF
-![Staging Branch's GIF](staging_gif.gif)
+## Tests
+1. [myMap](#myMap)
+2. [myFilter](#myFilter)
+3. [mySome](#mySome)
+4. [myEvery](#myEvery)
+5. [myReduce](#myReduce)
+6. [myIncludes](#myIncludes)
+7. [myIndexOf](#myIndexOf)
+8. [myLastIndexOf](#myLastIndexOf)
+9. [myKeys](#myKeys)
+10. [myValues](#myValues)
+
+### myMap
+![myMap Test](TESTS/Map/maptest.png)
+![myMap Test Results](TESTS/Map/maptestresults.png)
+### myFilter
+![myFilter Test](TESTS/Filter/filtertest.png)
+![myFilter Test Results](TESTS/Filter/filtertestresults.png)
+### mySome
+![mySome Test](TESTS/Some/sometest.png)
+![mySome Test Results](TESTS/Some/sometestresults.png)
+### myReduce
+![myReduce Test](TESTS/Reduce/reducetest.png)
+![myReduce Test Results](TESTS/Reduce/reducetestresults.png)
+### myIncludes
+![myIncludes Test](TESTS/Includes/includestest.png)
+![myIncludes Test Results](TESTS/Includes/includestestresults.png)
+### myIndexOf
+![myIndexOf Test](TESTS/IndexOf/indexoftest.png)
+![myIndexOf Test Results](TESTS/Includes/includestestresults.png)
+### myLastIndexOf
+![myLastIndexOf Test](TESTS/LastIndexOf/lastindexoftest.png)
+![myLastIndexOf Test Results](TESTS/LastIndexOf/lastindexoftestresults.png)
+### myKeys
+![myKeys Test](TESTS/Keys/keystest.png)
+![myKeys Test Results](TESTS/Keys/keystestresults.png)
+### myValues
+![myValues Test](TESTS/Values/valuestest.png)
+![myValues Test Results](TESTS/Values/valuestestresults.png)
 
 ## Grading 
 - 7% - Assignment functionality
