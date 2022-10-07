@@ -54,8 +54,14 @@ The prototype constructor is used to add new methods (functions) and properties 
 
 In this Assignment, we use the prototype constructor to add new methods to the Array() object.
  
-## GIF
-![Staging Branch's GIF](staging_gif.gif)
+## Tests
+1. 
+![Map Test](TESTS/Map/maptest.png)
+![Map Test Results](TESTS/Map/maptestresults.png)
+2. 
+![Filter Test](TESTS/Filter/filtertest.png)
+![Filter Test Results](TESTS/Filter/filtertestresults.png)
+
 
 ## Grading 
 - 7% - Assignment functionality
