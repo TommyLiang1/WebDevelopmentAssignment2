@@ -69,7 +69,7 @@ In this Assignment, we use the prototype constructor to add new methods to the A
 ### myMap
 ![myMap Test](TESTS/Map/maptest.png)
 ![myMap Test Results](TESTS/Map/maptestresults.png)
-### Filter
+### myFilter
 ![myFilter Test](TESTS/Filter/filtertest.png)
 ![myFilter Test Results](TESTS/Filter/filtertestresults.png)
 ### mySome
