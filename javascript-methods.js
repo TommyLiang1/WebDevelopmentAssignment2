@@ -170,4 +170,3 @@ let testArray5 = [, 3, 6, 5, 9, 11];
 
 let newArray1 = [];
 let newArray2 = [];
-
