@@ -8,13 +8,9 @@ Array.prototype.myMap = function(callbackFn) {
   // callbackFn will also be using the standard map syntax so it would be map(element, index, array)
   for(let i = 0; i < this.length; i++){
     if(this[i] === undefined) {
-      //console.log("null at index " + i);
-      //testArray[i] = null;
-      console.log(testArray[i]);
       continue;
     }   
     testArray[i] = callbackFn(this[i], i, this);
-    //testArray.push(callbackFn(this[i], i, this));
   }
   return testArray;
 };

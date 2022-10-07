@@ -17,12 +17,9 @@ Array.prototype.myMap = function(callbackFn) {
   // callbackFn will also be using the standard map syntax so it would be map(element, index, array)
   for(let i = 0; i < this.length; i++){
     if(this[i] === undefined) {
-      //console.log("null at index " + i);
-      //testArray[i] = null;
       continue;
     }   
     testArray[i] = callbackFn(this[i], i, this);
-    //testArray.push(callbackFn(this[i], i, this));
   }
   return testArray;
 };
@@ -76,12 +73,14 @@ Array.prototype.myReduce = function(callbackFn) {
   // If the array is empty, an TypeError is thrown.
   if(this.length === 0)
     throw new TypeError("Reduce of empty array with no initial value");
+  // If the array has only one element, return the element without calling the callbackfn
   if(this.length === 1)
     return this[0];
   let result = this[0];
   for(let i = 1; i < this.length; i++) {
     if(this[i] === undefined)
       continue;
+    // Update result with callbackfn
     result = callbackFn(result, this[i]);    
   }
   return result;
@@ -98,6 +97,7 @@ Array.prototype.myIncludes = function(searchElement) {
 
 // INDEXOF //
 Array.prototype.myIndexOf = function(searchElement) {
+  // start from index 0 up to the length of array
   for(let i = 0; i < this.length ; i++){
     if(this[i] == searchElement) return i ;
   }
@@ -107,6 +107,7 @@ Array.prototype.myIndexOf = function(searchElement) {
 
 // LASTINDEXOF //
 Array.prototype.myLastIndexOf = function(searchElement) {
+  // start from length of array down to index 0
   for(let i = this.length -1; i > -1  ; i--){
     if(this[i] == searchElement) return i 
   }
@@ -140,6 +141,8 @@ Object.myValues = function(object) {
   return testArray;
 };
 
+// FOR TESTING PURPOSES
+/* 
 const timesTwo = (x) => {
   return 2 * x;
 }
@@ -162,6 +165,7 @@ const maxNum = (a, b) => {
   return b;
 }
 
+
 let testArray1 = [];
 let testArray2 = [3, 5, 7, 10, 25];
 let testArray3 = [2, , 10, 20, 6, 8];
@@ -170,3 +174,4 @@ let testArray5 = [, 3, 6, 5, 9, 11];
 
 let newArray1 = [];
 let newArray2 = [];
+*/
