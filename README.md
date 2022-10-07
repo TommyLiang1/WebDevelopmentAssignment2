@@ -6,7 +6,7 @@ Starter template code for Assignment 2 - JavaScript Methods.
 1. [Group Members](#Group-Members)
 2. [Overview](#Overview)
 3. [Product Spec](#Product-Spec)
-4. [GIF](#GIF)
+4. [Tests](#Tests)
 5. [Grading](#Grading)
 
 ## Group Members
@@ -55,10 +55,15 @@ The prototype constructor is used to add new methods (functions) and properties 
 In this Assignment, we use the prototype constructor to add new methods to the Array() object.
  
 ## Tests
-1. 
+1. [Map](#Map)
+2. [Filter](#Filter)
+3. [Product Spec](#Product-Spec)
+4. [Tests](#Tests)
+5. [Grading](#Grading)
+### Map
 ![Map Test](TESTS/Map/maptest.png)
 ![Map Test Results](TESTS/Map/maptestresults.png)
-2. 
+### Filter
 ![Filter Test](TESTS/Filter/filtertest.png)
 ![Filter Test Results](TESTS/Filter/filtertestresults.png)
 
